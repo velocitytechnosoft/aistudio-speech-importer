@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "AI Studio Podcast & Speech Script Importer",
+  "version": "1.0.0",
+  "description": "Paste a full podcast or voiceover script into Google AI Studio Speech Playground and automatically generate all speech blocks, speakers, and styles.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://aistudio.google.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Import Script to AI Studio"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://aistudio.google.com/*"],
+      "css": ["content.css"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

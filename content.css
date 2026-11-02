@@ -1,0 +1,292 @@
+/* Floating & Inline Buttons for AI Studio Speech Script Importer */
+.aisi-inline-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #1e1f20;
+  color: #a8c7fa;
+  border: 1px solid #3c4043;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+  margin-left: 10px;
+}
+
+.aisi-inline-btn:hover {
+  background: #282a2c;
+  border-color: #8ab4f8;
+}
+
+.aisi-fab-btn {
+  position: fixed;
+  bottom: 76px;
+  right: 28px;
+  z-index: 99998;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #1a73e8, #8ab4f8);
+  color: #0d1117;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.aisi-fab-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(26, 115, 232, 0.5);
+}
+
+/* Modal Backdrop & Dialog */
+.aisi-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.68);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+}
+
+.aisi-modal {
+  background: #18191b;
+  color: #e3e3e3;
+  border: 1px solid #333538;
+  border-radius: 16px;
+  width: min(820px, 94vw);
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+  overflow: hidden;
+}
+
+.aisi-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 22px;
+  border-bottom: 1px solid #2b2d30;
+  background: #1e1f22;
+}
+
+.aisi-modal-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.aisi-close-btn {
+  background: transparent;
+  border: none;
+  color: #9aa0a6;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.aisi-close-btn:hover {
+  background: #2b2d30;
+  color: #ffffff;
+}
+
+.aisi-modal-body {
+  padding: 18px 22px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.aisi-format-hint {
+  background: #1e2229;
+  border: 1px solid #2f3b4c;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: #bdc1c6;
+  line-height: 1.5;
+}
+
+.aisi-format-hint code {
+  background: #111317;
+  color: #8ab4f8;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.aisi-controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+.aisi-control-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: #c4c7c5;
+}
+
+.aisi-select, .aisi-input {
+  background: #232528;
+  color: #e3e3e3;
+  border: 1px solid #3c4043;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 12.5px;
+}
+
+.aisi-textarea {
+  width: 100%;
+  min-height: 190px;
+  background: #111214;
+  color: #e8eaed;
+  border: 1px solid #3c4043;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-family: 'JetBrains Mono', Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.aisi-textarea:focus {
+  outline: none;
+  border-color: #8ab4f8;
+}
+
+.aisi-preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #9aa0a6;
+}
+
+.aisi-preview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 180px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.aisi-preview-item {
+  background: #202124;
+  border: 1px solid #303134;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.aisi-preview-badges {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.aisi-badge-speaker {
+  background: #1a3a5c;
+  color: #8ab4f8;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.aisi-badge-speaker.speaker-2 {
+  background: #3b2854;
+  color: #d7aefb;
+}
+
+.aisi-badge-style {
+  background: #2b2d30;
+  color: #c4c7c5;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+}
+
+.aisi-preview-text {
+  color: #e8eaed;
+  line-height: 1.4;
+}
+
+.aisi-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 22px;
+  border-top: 1px solid #2b2d30;
+  background: #1e1f22;
+}
+
+.aisi-status {
+  font-size: 12.5px;
+  color: #8ab4f8;
+}
+
+.aisi-footer-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.aisi-btn-secondary {
+  background: transparent;
+  color: #c4c7c5;
+  border: 1px solid #3c4043;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.aisi-btn-secondary:hover {
+  background: #2b2d30;
+}
+
+.aisi-btn-primary {
+  background: #8ab4f8;
+  color: #0d1117;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.aisi-btn-primary:hover {
+  background: #aecbfa;
+}
+
+.aisi-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
